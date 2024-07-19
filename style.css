@@ -1,0 +1,284 @@
+* {
+    font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+#home, #profile, #skills, #footer {
+    max-width: 1440px;
+    min-height: 800px;
+}
+.navbar-text, .headline, button, .footer-element {
+    color: white;
+}
+
+.headline-title {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.headline-subtitle {
+    font-size: 2rem;
+    text-align: center;
+}
+
+section#contact {
+    height: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #219EBC;
+    width: 100%;
+    height: 80px;
+    border-bottom: 22px #023047 solid;
+}
+
+.navbar-text {
+    font-size: 2rem;
+    text-shadow:
+    3px 3px 0 #000,
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+#home {
+    display: flex;
+    background-image: url("./assets/images/blue-sea-2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home-text {
+    margin: 150px auto;
+}
+
+.headline {
+    text-shadow:
+        3px 3px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile-box {
+    display: flex;
+    /* grid-template-columns: 250px auto; */
+    border: 2px black solid;
+    gap: 1rem;
+    padding: 10px;
+    max-width: 75%;
+}
+
+#me {
+    float: left;
+    margin: 0;
+    object-fit: cover;
+    max-width: 250px;
+    min-height: 250px;
+}
+
+.profile-content {
+    padding: 1rem;
+
+}
+
+#profile-greet, #profile-text {
+    font-size: 20px;
+}
+
+#skill-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+.skill-section {
+    display: flex;
+    flex-shrink: 3;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.skill-img {
+    float: left;
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+}
+
+.skill-text {
+    margin: 10px;
+}
+
+.skill-text > h3 {
+    font-size: 21px;
+}
+
+.skill-text > p {
+    font-size: 15px;
+}
+
+#contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    min-height: 20rem;
+    padding-bottom: 5rem;
+}
+
+button {
+    background-color: #1E272A;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+footer {
+    display: flex;
+    background-color: #1E272A;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer-element {
+    font-size: 1rem;
+}
+
+a { 
+    margin: 10px;
+    text-decoration: none;
+}
+
+#copyright {
+    margin: 0;
+    align-self: center;
+}
+
+@media screen and (max-width: 1024px){
+
+    /* changes the skill container grid to a 1 column grid */
+
+    #skill-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 25px;
+    }      
+    
+
+    /* changes for the dimensions of the elements on the website to fit smaller screens  */
+
+    #me {
+        margin: 0;
+        /* width: 50px;
+        height: 50px; */
+
+    }
+
+    /* changes the layout of the profile box so it can fit vertical screens  */
+
+
+    /* #profile-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } */
+
+    .navbar-text {
+        font-size: 1.5rem;
+    }
+
+    .headline-title {
+        font-size: 2rem;
+    }
+    
+    .headline-subtitle {
+        font-size: 1rem;
+    }
+    
+    .profile-text {
+        margin: auto;
+        flex-shrink: 1;
+    }
+
+    #contact-container {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar-text {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .footer-element {
+        font-size: 0.75em;
+    }
+
+    .skill-text {
+        margin: auto;
+    }
+
+    .skill-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact-container {
+        width: 75%;
+        margin: auto;
+    }
+        #profile-box {
+        display: flex;
+        flex-direction: column;
+    }
+}
